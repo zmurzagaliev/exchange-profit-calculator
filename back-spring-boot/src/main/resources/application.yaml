@@ -1,0 +1,12 @@
+application:
+  defaultSpread: 0.5
+  defaultBaseCurrency: EUR
+  defaultTargetCurrency: RUB
+
+
+server:
+  port: 8081
+
+fixer:
+  baseUrl: http://data.fixer.io/
+  accessToken: ed74b1e0e04cabcab713aa459f685337

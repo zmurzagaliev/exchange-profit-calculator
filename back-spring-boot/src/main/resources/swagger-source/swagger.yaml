@@ -1,0 +1,39 @@
+swagger: '2.0'
+info:
+  description: Exchanger profit calculator
+  version: 1.0.0
+  title: ExchangeProfitCalculator
+  termsOfService: temp
+  contact:
+    name: 'Zhaslan Murzagaliev'
+    email: '@zh.murzagaliev@gmail.ru'
+basePath: /exchange/v1
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /calculate:
+    get:
+      summary: calculation
+      description: >-
+        calculate exchange profit
+      operationId: calculate
+      tags:
+        - ExchangeProfitCalculator
+      parameters:
+        - name: buyDate
+          in: query
+          type: string
+          format: date
+        - name: amount
+          in: query
+          type: number
+          format: decimal
+      responses:
+        '200':
+          description: OK
+        '500':
+          description: Internal Server Error
